@@ -417,6 +417,8 @@ namespace VoltSharpmake
 		{
 			base.ConfigureAll(conf, target);
 
+			conf.IsExcludedFromBuild = true;
+
 			// LightUSD headers are included relative to src, e.g. <lightusd.hh> and <tydra/render-data.hh>.
 			conf.IncludePaths.Add(@"[project.SourceRootPath]");
 			foreach (string includeDirectory in s_textoolsIncludeDirectories)
